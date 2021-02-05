@@ -1,0 +1,254 @@
+body {
+    background: rgb(43, 43, 43);
+    color: rgb(175, 175, 175);
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    padding: 0px;
+    margin:0px;
+    position: absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+}
+
+#navbar {
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    min-height: 50px;
+    height: 10%;
+    background: rgb(31, 31, 31);
+    box-shadow: #000 0px 0px 5px;
+}
+
+#navbar #ico {
+    position: absolute;
+    height: 40px;
+    top: calc(50% - 20px);
+    left:20px;
+}
+
+#navbar #display-name {
+    position: absolute;
+    height: 30px;
+    top: calc(50% - 15px);
+    left: 80px;
+    font-size: 26px;
+}
+
+#navbar #search {
+    position: absolute;
+    height: 40px;
+    width: 300px;
+    left: calc(50% - 300px);
+    top: calc(50% - 20px);
+    margin-left: 150px;
+    margin-right: 150px;
+    outline: none;
+    background: rgb(43, 43, 43);
+    border: solid 2px rgb(75, 75, 75);
+    border-radius: 5px;
+    padding-left: 10px;
+    color: rgb(175, 175, 175);
+}
+
+#navbar #search-res {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: calc(50% - 150px);
+    top: calc(50% + 35px);
+    background: rgb(39,39,39);
+    border: solid 2px rgb(75, 75, 75);
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+#player {
+    position: absolute;
+    z-index: 50;
+    left: 0px;
+    top: 10%;
+    bottom: 0px;
+    min-width: 80px;
+    width: 60%;
+    background: rgb(39,39,39);
+}
+
+#invisPlayer {
+    display: none;
+}
+
+#player #player-album {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 15%;
+    width:400px;
+    height:300px;
+    box-shadow: #000 0px 0px 5px;
+}
+
+#player #player-info {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(15% + 320px);
+    width:400px;
+    text-align: center;
+}
+
+#player #time {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(15% + 345px);
+    width:400px;
+    text-align: center;
+}
+
+#queue {
+    position: absolute;
+    z-index: 75;
+    bottom: 0px;
+    top:10%;
+    right:0;
+    width: 40%;
+    min-width: 200px;
+    background: rgb(43, 43, 43);
+    box-shadow: #000 0px 0px 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    overflow-y: auto;
+}
+
+.result {
+    height: 80px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+    pointer-events: all;
+}
+
+.result #album {
+    
+    height: 70px;
+    width: 70px;
+}
+
+.result #meta {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.result #title {
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.result #artist {
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.result:hover {
+    background: rgb(75, 75, 75);
+    cursor: pointer;
+}
+
+#play {
+    height:40px;
+    width:40px;
+    position: absolute;
+    top: calc(15% + 370px);
+    left: calc(50% - 50px);
+    cursor: pointer;
+}
+
+#skip {
+    height:40px;
+    width:40px;
+    position: absolute;
+    top: calc(15% + 370px);
+    left: calc(50% + 10px);
+    cursor: pointer;
+}
+
+#duration {
+    width:400px;
+    height:10px;
+    position:absolute;
+    left: calc(50% - 200px);
+    top: calc(15% + 300px);
+}
+
+#volume {
+    width:100px;
+    height:10px;
+    position:absolute;
+    left: calc(50% - 50px);
+    top: calc(15% + 420px);
+}
+
+#queueControl {
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    height: 80px;
+}
+
+#addToQueue {
+    position: absolute;
+    top:20px;
+    right:0px;
+    height: 40px;
+    width: 40px;
+    transition: all .3s;
+}
+
+#addToQueue:hover {
+    filter: invert(.7);
+}
+
+#remCue {
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    height: 80px;
+}
+
+#remCue img {
+    position: absolute;
+    top:30px;
+    right:0px;
+    height: 20px;
+    width: 20px;
+    transition: all .3s;
+}
+
+#remCue img:hover {
+    filter: invert(.7);
+}
+
+.loader {
+  border: 12px solid #666;
+  border-top: 12px solid #633b70;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right:20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    background: rgb(43, 43, 43) !important;
+}

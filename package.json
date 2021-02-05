@@ -1,0 +1,59 @@
+{
+  "name": "dmca",
+  "version": "1.0.0",
+  "author": "FauxDev",
+  "description": "Bypass Twitch's stupidity with their handling of DMCA issues",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.1.0"
+  },
+  "dependencies": {
+    "adler32": "^0.1.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "qs": "^6.9.6",
+    "xfetch-js": "^0.5.0",
+    "youtube-music-api": "^1.0.6"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon":"C:\\Users\\FauxDev\\Documents\\DMCA\\site\\images\\icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "DMCA",
+            "setupIcon": "./site/images/icon.ico",
+            "setupExe": "DMCA Setup.exe",
+            "iconUrl": "https://fauxdev.com/asdasd.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
